@@ -10,28 +10,15 @@ reset */
 
 /*** carouselOne ***/
 
-#carouselOne {
+#carousel {
   max-width: 1200px;
   height: 40vw;
   max-height: 480px;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 1.5rem;
   position: relative;
   padding: 1rem;
 }
-#carouselOneContainer {
-  width: 100%;
-  height: 100%;
-  background-color: brown;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#carouselOneContainer > .item {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-#navCarouselOne {
+#navCarousel {
   position: relative;
   z-index: 1;
   top: 50%;
@@ -39,17 +26,57 @@ reset */
   display: flex;
   justify-content: space-between;
 }
-.my-btn-carousel > i {
+#navCarousels {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+#navCarousel .my-btn-carousel > i {
   font-size: 30px;
   color: rgba(255, 255, 255, 0.2);
 }
-.my-btn-carousel > i:hover {
+#navCarousel .my-btn-carousel > i:hover {
   transform: scale(1.2);
   color: rgba(255, 255, 255, 0.8);
 }
-.my-btn-carousel > i:active {
+#navCarousel .my-btn-carousel > i:active {
   color: rgb(115, 129, 255, 0.5);
 }
+#navCarousels .my-btn-carousel > i {
+  font-size: 100px;
+  color: rgba(0, 17, 255);
+}
+#navCarousels .my-btn-carousel > i:hover {
+  transform: scale(1.2);
+  color: rgba(0, 0, 0);
+}
+#navCarousels .my-btn-carousel > i:active {
+  color: rgba(255, 0, 0);
+}
+
+/* carouselContainer */
+
+.carouselContainer {
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.carouselContainer > .item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+/* /carouselOne */
+
+/* carouselTwo */
+
+/* /carouselTwo */
 
 /* Utilities carousel */
 .item {

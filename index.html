@@ -22,22 +22,39 @@
     <title>Carousel</title>
   </head>
   <body>
-    <div id="carouselOne">
-      <div id="navCarouselOne">
+    <div id="carousel">
+      <nav id="navCarousel">
         <div class="my-btn-carousel">
-          <i id="previousOne" class="fa-solid fa-angles-left"></i>
+          <i id="previous" class="fa-solid fa-angles-left"></i>
         </div>
-        <div id="nextOne" class="my-btn-carousel">
+        <div id="next" class="my-btn-carousel">
           <i class="fa-solid fa-angles-right"></i>
         </div>
-      </div>
-      <div id="carouselOneContainer">
-        <img class="item active" src="img/01.jpg" alt="" />
-        <img class="item" src="img/02.jpg" alt="" />
-        <img class="item" src="img/03.jpg" alt="" />
-        <img class="item" src="img/04.jpg" alt="" />
-        <img class="item" src="img/05.jpg" alt="" />
+      </nav>
+      <div>
+        <div id="carouselOneContainer" class="carouselContainer active">
+          <img class="item active" src="img/01.jpg" alt="" />
+          <img class="item" src="img/02.jpg" alt="" />
+          <img class="item" src="img/03.jpg" alt="" />
+          <img class="item" src="img/04.jpg" alt="" />
+          <img class="item" src="img/05.jpg" alt="" />
+        </div>
+        <div id="carouselTwoContainer" class="carouselContainer">
+          <img class="item active" src="img/05.jpg" alt="" />
+          <img class="item" src="img/04.jpg" alt="" />
+          <img class="item" src="img/05.jpg" alt="" />
+          <img class="item" src="img/04.jpg" alt="" />
+          <img class="item" src="img/05.jpg" alt="" />
+        </div>
       </div>
     </div>
+    <nav id="navCarousels">
+      <div class="my-btn-carousel">
+        <i id="previousCarousel" class="fa-solid fa-angles-left"></i>
+      </div>
+      <div id="nextCarousel" class="my-btn-carousel">
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
+    </nav>
   </body>
 </html>

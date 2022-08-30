@@ -1,11 +1,41 @@
 console.log("hello world");
 
+/*
 // creo un primo modello che possa andare avanti e indietro
+document
+  .getElementById("previousCarousel")
+  .addEventListener("click", function () {
+    const activeElementCarousel = document.querySelector(
+      ".carouselContainer.active"
+    );
+    const previousElementCarousel =
+      activeElementCarousel.previousElementSibling;
+    if (previousElementCarousel) {
+      activeElementCarousel.classList.remove("active");
+      previousElementCarousel.classList.add("active");
+    }
+  });
+
+// collego pulsante next
+
+document.getElementById("nextCarousel").addEventListener("click", function () {
+  const activeElementCarousel = document.querySelector(
+    ".carouselContainer.active"
+  );
+  const nextElementCarousel = activeElementCarousel.nextElementSibling;
+  if (nextElementCarousel) {
+    activeElementCarousel.classList.remove("active");
+    nextElementCarousel.classList.add("active");
+  }
+});
+*/
+
+const image = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 
 // le variabili vanno resettate a ogni evento
 // collego il pulsante previous
 
-document.getElementById("previousOne").addEventListener("click", function () {
+document.getElementById("previous").addEventListener("click", function () {
   const activeElement = document.querySelector(".item.active");
   const previousElement = activeElement.previousElementSibling;
   if (previousElement) {
@@ -16,7 +46,7 @@ document.getElementById("previousOne").addEventListener("click", function () {
 
 // collego pulsante next
 
-document.getElementById("nextOne").addEventListener("click", function () {
+document.getElementById("next").addEventListener("click", function () {
   const activeElement = document.querySelector(".item.active");
   const nextElement = activeElement.nextElementSibling;
   if (nextElement) {
