@@ -1,0 +1,40 @@
+/* reset 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+reset */
+
+/*** carouselOne ***/
+
+#carouselOne {
+  max-width: 1200px;
+  height: 40vw;
+  max-height: 480px;
+  margin: 1.5rem auto;
+  position: relative;
+  padding: 1rem;
+}
+#carouselOneContainer {
+  width: 100%;
+  height: 100%;
+  background-color: brown;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#navCarouselOne {
+  position: relative;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.my-btn-carousel > i {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.2);
+}
