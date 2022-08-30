@@ -11,12 +11,24 @@ reset */
 /*** carouselOne ***/
 
 #carousel {
-  max-width: 1200px;
-  height: 40vw;
-  max-height: 480px;
-  margin: 1.5rem auto 1.5rem;
+  width: 100vw;
+  height: calc((100vw / 12) * 5);
+
+  margin: 3rem auto 1.5rem;
   position: relative;
   padding: 1rem;
+}
+@media screen and (min-width: 1200px) {
+  #carousel {
+    width: 80vw;
+    height: calc((80vw / 12) * 5);
+  }
+}
+@media screen and (min-width: 1600px) {
+  #carousel {
+    width: 60vw;
+    height: calc((60vw / 12) * 5);
+  }
 }
 #navCarousel {
   position: relative;
