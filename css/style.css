@@ -26,6 +26,11 @@ reset */
   top: 0;
   left: 0;
 }
+#carouselOneContainer > .item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 #navCarouselOne {
   position: relative;
   z-index: 1;
@@ -37,4 +42,19 @@ reset */
 .my-btn-carousel > i {
   font-size: 30px;
   color: rgba(255, 255, 255, 0.2);
+}
+.my-btn-carousel > i:hover {
+  transform: scale(1.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+.my-btn-carousel > i:active {
+  color: rgb(115, 129, 255, 0.5);
+}
+
+/* Utilities carousel */
+.item {
+  display: none;
+}
+.active {
+  display: inline-block;
 }
