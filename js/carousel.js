@@ -1,6 +1,9 @@
 console.log("hello world");
+// le variabili vanno resettate a ogni evento
 
-// creo un primo modello che possa andare avanti e indietro
+// NAV CAROUSELS
+
+// previus carousel
 document
   .getElementById("previousCarousel")
   .addEventListener("click", function () {
@@ -15,7 +18,7 @@ document
     }
   });
 
-// collego pulsante next
+// next carousel
 
 document.getElementById("nextCarousel").addEventListener("click", function () {
   const activeElementCarousel = document.querySelector(
@@ -30,7 +33,8 @@ document.getElementById("nextCarousel").addEventListener("click", function () {
 
 // const image = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 
-// le variabili vanno resettate a ogni evento
+// NAV SINGLE CAROUSEL
+
 // collego il pulsante previous
 
 document.getElementById("previous").addEventListener("click", function () {

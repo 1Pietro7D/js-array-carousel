@@ -30,13 +30,23 @@ reset */
     height: calc((60vw / 12) * 5);
   }
 }
-#navCarousel {
+#navSingleCarousel {
   position: relative;
   z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
+}
+#navSingleCarousel.horizontal {
+  top: 50%;
+  transform: translateY(-50%);
+}
+#navSingleCarousel.vertical {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#navSingleCarousel.vertical > .little {
+  transform: rotate(90deg);
 }
 #navCarousels {
   max-width: 1200px;
@@ -44,15 +54,15 @@ reset */
   display: flex;
   justify-content: space-around;
 }
-#navCarousel .my-btn-carousel > i {
+#navSingleCarousel .my-btn-carousel > i {
   font-size: 30px;
   color: rgba(255, 255, 255, 0.2);
 }
-#navCarousel .my-btn-carousel > i:hover {
+#navSingleCarousel .my-btn-carousel > i:hover {
   transform: scale(1.2);
   color: rgba(255, 255, 255, 0.8);
 }
-#navCarousel .my-btn-carousel > i:active {
+#navSingleCarousel .my-btn-carousel > i:active {
   color: rgb(115, 129, 255, 0.5);
 }
 #navCarousels .my-btn-carousel > i {
