@@ -45,7 +45,8 @@ reset */
   flex-direction: column;
   align-items: center;
 }
-#navSingleCarousel.vertical > .little {
+#navSingleCarousel.vertical > .little,
+#directNav.vertical {
   transform: rotate(90deg);
 }
 #navCarousels {

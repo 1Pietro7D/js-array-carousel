@@ -31,6 +31,26 @@ document.getElementById("nextCarousel").addEventListener("click", function () {
   }
 });
 
+// directNavigation
+const buttonDirectNav = document.getElementById("directNav");
+const navSingle = document.getElementById("navSingleCarousel");
+let clicker;
+buttonDirectNav.addEventListener("click", function () {
+  if (clicker) {
+    buttonDirectNav.classList.remove("horizontal");
+    buttonDirectNav.classList.add("vertical");
+    navSingle.classList.remove("horizontal");
+    navSingle.classList.add("vertical");
+    clicker = false;
+  } else {
+    buttonDirectNav.classList.add("horizontal");
+    buttonDirectNav.classList.remove("vertical");
+    navSingle.classList.add("horizontal");
+    navSingle.classList.remove("vertical");
+    clicker = true;
+  }
+});
+
 // const image = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 
 // NAV SINGLE CAROUSEL
