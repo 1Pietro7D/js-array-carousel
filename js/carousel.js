@@ -142,11 +142,11 @@ document.getElementById("previous").addEventListener("click", function () {
 
 // collego pulsante next
 
+// Istruction for FinishCarousel and general carousel
 document.getElementById("next").addEventListener("click", function () {
   const activeElement = document.querySelector(
     ".carouselContainer.active .item.active"
   );
-  // Istruction for FinishCarousel and general carousel
   const nextElement = activeElement.nextElementSibling;
   if (nextElement) {
     activeElement.classList.remove("active");
@@ -156,7 +156,7 @@ document.getElementById("next").addEventListener("click", function () {
 
   //  reset of node
   carouselInfinityContainer.innerHTML = "";
-  if (imagesIndex < imagesInfinity.length) {
+  if (imagesIndex < imagesInfinity.length - 1) {
     imagesIndex++;
   } else {
     imagesIndex = 0;
@@ -167,11 +167,11 @@ document.getElementById("next").addEventListener("click", function () {
     if (index === imagesIndex) {
       activeClass = "active";
     }
-    carouselInfinityContainer.innerHTML += `<img class="item ${activeClass}" src="img/0${imagesInfinity[index]}" alt"" />`;
+    carouselInfinityContainer.innerHTML += `<img class="item ${activeClass}" src="img/0${imagesInfinity[imagesIndex]}" alt"" />`;
   }
   // Istruction for InfinityThumbsCarousel Carousel
   imageContainer.innerHTML = "";
-  if (thumbsIndex < imagesInfinityThumbs.length) {
+  if (thumbsIndex < imagesInfinityThumbs.length - 1) {
     thumbsIndex++;
   } else {
     thumbsIndex = 0;
