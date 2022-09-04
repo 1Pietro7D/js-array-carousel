@@ -90,11 +90,6 @@ reset */
   display: none;
 }
 
-.carouselContainer > .item {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
 /* /carouselOne */
 
 /* carouselTwo */
@@ -103,8 +98,33 @@ reset */
 
 /* Utilities carousel */
 .item {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   display: none;
 }
+
 .active {
   display: inline-block;
+}
+
+/* TERZO CAROUSEL NONCHé INFINITY THUMBS */
+#imageContainer {
+  width: 80%;
+  height: 100%;
+}
+#thumbsContainer {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow-y: auto;
+}
+#thumbsContainer > .item {
+  height: 20%;
+  display: block;
+}
+::-webkit-scrollbar {
+  width: 0px;
 }
