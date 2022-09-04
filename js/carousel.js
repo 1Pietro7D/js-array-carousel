@@ -56,7 +56,16 @@ buttonDirectNav.addEventListener("click", function () {
 // NAV SINGLE CAROUSEL
 
 // collego il pulsante previous
+const carouselFinishContainer = document.getElementById(
+  "carouselFinishContainer"
+);
 
+const images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+let imagesIndex = 0;
+
+const carouselInfinityContainer = document.getElementById(
+  "carouselInfinityContainer"
+);
 document.getElementById("previous").addEventListener("click", function () {
   const activeElement = document.querySelector(
     ".carouselContainer.active > .item.active"
@@ -65,6 +74,21 @@ document.getElementById("previous").addEventListener("click", function () {
   if (previousElement) {
     activeElement.classList.remove("active");
     previousElement.classList.add("active");
+  }
+  carouselInfinityContainer.innerHTML = "";
+  if (imagesIndex > 0) {
+    imagesIndex--;
+  } else {
+    imagesIndex = images.length - 1;
+    console.log("guarda me");
+  }
+
+  for (let index = 0; index < images.length; index++) {
+    let activeClass = "";
+    if (index === imagesIndex) {
+      activeClass = "active";
+    }
+    carouselInfinityContainer.innerHTML += `<img class="item ${activeClass}" src="img/0${images[index]}" alt"" />`;
   }
 });
 
