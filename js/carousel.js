@@ -1,6 +1,8 @@
 console.log("hello world");
 // le variabili vanno resettate a ogni evento
-
+let idxInfinity = 0;
+let idxThumbsInfinity = 0;
+let activeIdx;
 // NAV CAROUSELS
 
 // previus carousel
@@ -15,6 +17,7 @@ document
     if (previousElementCarousel) {
       activeElementCarousel.classList.remove("active");
       previousElementCarousel.classList.add("active");
+      activeIdx = idxInfinity;
     }
   });
 
@@ -28,6 +31,7 @@ document.getElementById("nextCarousel").addEventListener("click", function () {
   if (nextElementCarousel) {
     activeElementCarousel.classList.remove("active");
     nextElementCarousel.classList.add("active");
+    activeIdx = idxThumbsInfinity;
   }
 });
 
@@ -182,6 +186,6 @@ document.getElementById("next").addEventListener("click", function () {
     if (index === thumbsIndex) {
       activeClass = "active";
     }
-    imageContainer.innerHTML += `<img class="item ${activeClass}" src="img/00${imagesInfinityThumbs[index]}" alt"" />`;
+    imageContainer.innerHTML += `<img class="item ${activeClass}" src="img/00${imagesInfinityThumbs[thumbsIndex]}" alt"" />`;
   }
 });
