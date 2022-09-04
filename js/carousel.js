@@ -142,11 +142,11 @@ document.getElementById("previous").addEventListener("click", function () {
 
 // collego pulsante next
 
-// Istruction for FinishCarousel and general carousel
 document.getElementById("next").addEventListener("click", function () {
   const activeElement = document.querySelector(
     ".carouselContainer.active .item.active"
   );
+  // Istruction for FinishCarousel and general carousel
   const nextElement = activeElement.nextElementSibling;
   if (nextElement) {
     activeElement.classList.remove("active");
@@ -156,10 +156,10 @@ document.getElementById("next").addEventListener("click", function () {
 
   //  reset of node
   carouselInfinityContainer.innerHTML = "";
-  if (imagesIndex > 0) {
-    imagesIndex--;
+  if (imagesIndex < imagesInfinity.length) {
+    imagesIndex++;
   } else {
-    imagesIndex = imagesInfinity.length - 1;
+    imagesIndex = 0;
   }
 
   for (let index = 0; index < imagesInfinity.length; index++) {
@@ -171,10 +171,10 @@ document.getElementById("next").addEventListener("click", function () {
   }
   // Istruction for InfinityThumbsCarousel Carousel
   imageContainer.innerHTML = "";
-  if (thumbsIndex > 0) {
-    thumbsIndex--;
+  if (thumbsIndex < imagesInfinityThumbs.length) {
+    thumbsIndex++;
   } else {
-    thumbsIndex = imagesInfinityThumbs.length - 1;
+    thumbsIndex = 0;
   }
 
   for (let index = 0; index < imagesInfinityThumbs.length; index++) {
